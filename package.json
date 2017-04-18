@@ -12,5 +12,8 @@
     "bot"
   ],
   "author": "Divyanshu Maithani",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
 }

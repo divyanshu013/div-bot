@@ -1,6 +1,8 @@
 var express = require('express');
 var app = express();
 
+var port = process.env.PORT || 8080;
+
 app.get('/webhook', function(req, res) {
   if (req.query['hub.mode'] === 'subscribe' && req.query['hub.verify_token'] === 'top-secret-div') {
     console.log("Validating webhook");
@@ -12,8 +14,8 @@ app.get('/webhook', function(req, res) {
   }
 });
 
-app.listen(9999, function () {
-  console.log('Example app listening on port 3000!');
+app.listen(port, function () {
+  console.log('App listening on port ' + port);
 })
 
 //https://div-bot.herokuapp.com/

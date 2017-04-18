@@ -1,0 +1,15 @@
+{
+  "name": "div-bot",
+  "version": "1.0.0",
+  "description": "Div's alter ego",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "div",
+    "bot"
+  ],
+  "author": "Divyanshu Maithani",
+  "license": "MIT"
+}

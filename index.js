@@ -1,7 +1,10 @@
 var express = require('express');
-var app = express();
+var bodyParser = require('body-parser');
 
+var app = express();
 var port = process.env.PORT || 8080;
+
+app.use(bodyParser.json());
 
 app.get('/webhook', function(req, res) {
   if (req.query['hub.mode'] === 'subscribe' && req.query['hub.verify_token'] === 'top-secret-div') {

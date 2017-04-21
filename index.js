@@ -1,5 +1,6 @@
 var express = require('express');
 var bodyParser = require('body-parser');
+require('dotenv').config();
 
 var app = express();
 var port = process.env.PORT || 8080;
@@ -7,7 +8,7 @@ var port = process.env.PORT || 8080;
 app.use(bodyParser.json());
 
 app.get('/webhook', function(req, res) {
-  if (req.query['hub.mode'] === 'subscribe' && req.query['hub.verify_token'] === 'top-secret-div') {
+  if (req.query['hub.mode'] === 'subscribe' && req.query['hub.verify_token'] === process.env.secret) {
     console.log("Validating webhook");
     res.status(200).send(req.query['hub.challenge']);
   }

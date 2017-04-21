@@ -185,5 +185,3 @@ function receivedPostback(event) {
 app.listen(port, function () {
   console.log('App listening on port ' + port);
 })
-
-//https://div-bot.herokuapp.com/
